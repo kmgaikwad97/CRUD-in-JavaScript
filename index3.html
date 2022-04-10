@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Name = <input type="text" name="fname" id="fname"> <br><br>
+    Last Name = <input type="text" name="lname" id="lname"> <br><br>
+    Age = <input type="text" name="age" id="age"><br><br>
+    <button onclick="addRow()">Add Row</button>
+
+    <table border="1">
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Age</td>
+        </tr>
+
+        <tr>
+            <td>Kshitij</td>
+            <td>Gaikwad</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Anand</td>
+            <td>Pawar</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Mayur</td>
+            <td>Rane</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Prashant</td>
+            <td>Nalawade</td>
+            <td>23</td>
+        </tr>
+    </table>
+
+    <script>
+
+        function addRow(){
+            var fname = document.getElementById('fname').value
+            var lname = document.getElementById('lname').value
+            var age = document.getElementById('age').value
+
+
+            var table = document.getElementsByTagName('table')[0]
+            var newRow = table.insertRow(table.rows.length);
+            console.log(table.rows.length);
+
+            var cell1 = newRow.insertCell(0)
+            var cell2 = newRow.insertCell(1)
+            var cell3 = newRow.insertCell(2)
+
+            cell1.innerHTML = fname;
+            cell2.innerHTML = lname;
+            cell3.innerHTML = age;
+        }
+
+
+
+    </script>
+</body>
+</html>

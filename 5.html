@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article class="regular">
+        <h2>Textbox</h2>
+
+        <label for="tbuser">Username:</label>
+        <input type="text" id="a">
+        <input type="button" id="b" value="click Me">
+        <p class="output" id="c"></p>
+
+    </article>
+
+    <script>
+
+        const textbox = document.getElementById('a')
+        const button = document.getElementById('b')
+        const paragraph = document.getElementById('c')
+
+        function fun1(){
+            paragraph.innerHTML = textbox.value 
+        }
+
+        button.addEventListener('click',fun1);
+
+    </script>
+
+</body>
+</html>
